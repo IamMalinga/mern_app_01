@@ -11,7 +11,6 @@ import About from './pages/About'
 import Events from './pages/events/Events'
 import EventDetails,{EventDetailsLoader} from './pages/events/EventDetails';
 import RegistrationLayout from './layouts/RegistrationLayout'
-import Signup from './pages/registration/Signup'
 import Login from './pages/registration/Login'
 import Faq from './pages/help/Faq'
 import Contact from './pages/help/Contact'
@@ -40,7 +39,6 @@ const router = createBrowserRouter(
           loader={EventDetailsLoader}
         />
       </Route>
-      <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
       <Route path="logout" element={<Logout />} />
       <Route path="select" element={<MyEvents />} />

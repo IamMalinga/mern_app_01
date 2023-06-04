@@ -42,15 +42,12 @@ export default function MyEvents() {
       <h2> My Events</h2>
       <p>This is the events that you are already choosen</p>
 
-
       <div>
-      <div className="home">
-      <div className="events">
+        <div className="events">
         { selected_events && selected_events.map((event) => (
           <SelectedEvents key={event._id} event={event} />
         ))}
-      </div>
-    </div>
+        </div>
       </div>
      
     </motion.div>

@@ -29,7 +29,7 @@ export default function Contact() {
   return (
     <div className="contact">
       <h3>Contact Us</h3>
-      <form onSubmit={handleSubmit}>
+      <form className="contact" onSubmit={handleSubmit}>
         <label>
           <span>Your email:</span>
           <input type="email" name="email" onChange={e => setEmail(e.target.value)} value={email} required />

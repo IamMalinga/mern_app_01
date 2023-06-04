@@ -36,8 +36,7 @@ export default function RootLayout() {
           <NavLink to="events">Events</NavLink>
           <NavLink style={{display : displayType}} to='select'>My Events</NavLink>
           <NavLink to="about">About</NavLink>
-          <NavLink to="help">Help</NavLink>
-          <NavLink style={{display : displaySignupButton}} to="signup">Sign up</NavLink>
+          <NavLink style={{display : displayType}} to="help">Help</NavLink>
           <NavLink to={log}>{head}</NavLink>
           </AnimatePresence>
         </nav>

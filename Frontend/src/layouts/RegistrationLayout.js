@@ -7,13 +7,16 @@ export default function RegistrationLayout() {
   const { user } = useAuthContext()
   const [msg,setMsg] = useState();
   const [warning,setWarning] = useState();
+  const [isVisible,setVisibility] = useState()
   useEffect(() => {
   
      
     
     if(!user){
       setMsg('Please log in to register for the events!...')
+      setVisibility('hidden')
     }else{
+      setVisibility('block')
       setMsg('Welcome to the events registration...')
       if(user.isFinalYear){
         setWarning('Since you are final year student you can only register for Aurudu Kumara Kumari event')
@@ -21,13 +24,13 @@ export default function RegistrationLayout() {
         setWarning('You are not final year')
       }
     }
-  },[msg,user])
+  },[msg,user,isVisible])
   
   return (
     <div className="careers-layout">
       <h2>Events</h2>
       <p>{msg}</p>
-      <p>{warning}</p>
+      <p className="isFinal" style={{visibility:isVisible}}>{warning}</p>
       <Outlet />
      
     </div>
